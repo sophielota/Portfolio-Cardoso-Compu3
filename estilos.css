@@ -200,7 +200,16 @@ body {
     position: absolute;
     height: auto;
     z-index: 1; 
+    animation: twinkle 2s infinite ease-in-out;
+}
 
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2; 
+    }
+    50% {
+        opacity: 1; 
+    }
 }
 
 .decorative-star-1 {
@@ -208,18 +217,21 @@ body {
     top: 15%;
     left: 8%;
     transform: rotate(20deg);
+    animation-delay: 0.5s;
 }
 .decorative-star-2 {
     width: clamp(30px, 3vw, 50px);
     top: 40%;
     left: 2%;
     transform: rotate(-10deg);
+    animation-delay: 1.2s;
 }
 .decorative-star-3 {
     width: clamp(70px, 6vw, 90px);
     bottom: 10%;
     left: 12%;
     transform: rotate(45deg);
+    animation-delay: 0.8s;
 }
 
 .decorative-star-4 {
@@ -227,18 +239,21 @@ body {
     top: 20%;
     right: 10%;
     transform: rotate(-30deg);
+    animation-delay: 1.8s;
 }
 .decorative-star-5 {
     width: clamp(60px, 5.5vw, 85px);
     top: 50%;
     right: 5%;
     transform: rotate(10deg);
+    animation-delay: 0.3s;
 }
 .decorative-star-6 {
     width: clamp(25px, 2.5vw, 40px);
     bottom: 5%;
     right: 15%;
     transform: rotate(60deg);
+    animation-delay: 1.5s;
 }
 
 .neon-line {
