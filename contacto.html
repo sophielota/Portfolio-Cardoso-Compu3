@@ -24,7 +24,75 @@
                 </header>
 
             <main>
+                <section class="contacto">
+                    <h1>Trabajamos juntos?</h1>
+                        <p>Campos obligatorios*</p>
+                        
+                        <form method="post" action="mailto:sofiacardosoprestes@gmail.com?subject=Contacto formulario" target="_blank" enctype="text/plain">
+                            <div class="formulito">
+                                <label for="Nombre">* Nombre: </label>
+                                <input type="text" name="Nombre" id="Nombre" maxlength="30" placeholder="Nombre completo" required>
+                                
+                                <label>* Email:</label>
+                                <input type="email" name="Email" id="Email" required>
+
+                                <p>* Trabajo</p>
+                                <label> Empresa <input type="radio" name="Trabajo" id="Empresa" value="Empresa"></label>
+                                <label> Independiente <input type="radio" name="Trabajo" id="Independiente" value="Independiente" checked></label>
+                                
+                                <div id="camposEmpresa" class="oculto">
+                                <label for="razon_social">Razón Social:</label>
+                                <input type="text" id="razon_social" name="razon_social">
                 
+                                <label for="cuit">CUIT:</label>
+                                <input type="text" id="cuit" name="cuit">
+                                </div>
+
+                                <p>Proyecto</p>
+                                
+                                <label>Editorial <input type="checkbox" name="Proyecto" value="Editorial" id="Web"></label>
+
+                                <label>Retoque fotográfico <input type="checkbox" name="Proyecto" value="Retoque fotográfico" id="Retoque fotográfico"></label>
+
+                                <label>Branding <input type="checkbox" name="Proyecto" value="Branding" id="Branding"></label>
+
+                                <label>Folletería <input type="checkbox" name="Proyecto" value="Folletería" id="Folletería"></label>
+
+                                <label>Ilustración <input type="checkbox" name="Proyecto" value="Ilustración" id="Ilustración"></label>
+
+                                <label>Redes <input type="checkbox" name="Proyecto" value="Redes" id="Redes"></label>
+
+                                <label>Paquetería <input type="checkbox" name="Proyecto" value="Paquetería" id="Paquetería"></label>
+
+                                <input type="reset">
+                                <input type="submit">
+                            </div>
+                        </form>
+
+                </section>
+                
+                <section class="infodecontacto">
+                    <div class="info-container">
+                        <div class="contacto-qr">
+                                <img src="img/whatsapp.png" alt="WhatsApp QR">
+                        </div>
+                        <div class="contacto-redes">
+                            <h2>Estemos en contacto</h2>
+                            <div class="contact-item">
+                                <img src="img/icono-ig.png" alt="Instagram Icon" class="contact-icon">
+                                <span>@sophielota</span>
+                            </div>
+                            <div class="contact-item">
+                                <img src="img/icono-fb.png" alt="Facebook Icon" class="contact-icon">
+                                <span>/soficxrdso</span>
+                            </div>
+                            <div class="contact-item">
+                                <img src="img/icono-gmail.png" alt="Email Icon" class="contact-icon">
+                                <span>sofiacardosoprestes@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
 
@@ -42,4 +110,6 @@
                     </ul>
                 </div>
             </footer>  
+            <script src="archivo.js"></script> 
         </body>
+</html>
