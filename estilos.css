@@ -64,6 +64,8 @@
     display: flex;
     align-items: center;
     gap: 40px; 
+    margin-right: 30px;
+    margin-left: 60px
 }
 
 .nav-links li a {
