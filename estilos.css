@@ -10,9 +10,8 @@
     font-weight: bold;
     font-style: normal;
     font-display: swap;
-
-
 }
+
 @font-face {
     font-family: "Josefin Sans";
     src: url(fonts/JosefinSans-Italic.ttf) format(truetype);
@@ -162,6 +161,7 @@ body {
     padding: 30px;
     padding-left: 50px;
     padding-bottom: 60px;
+    text-align: left;
 }
 
 .profesion {
