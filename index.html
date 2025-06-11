@@ -10,10 +10,10 @@
 
     </head>
         <body class="home-page">
-            <header class="main-header">
+            <header class="main-header"> <!-- Si todos tus headers son iguales, podes directamente aplicar la clase al header en lugar de ponerle una class a cada uno. Lo mismo en todas las partes que pase algo así. -->
                     <nav class="navbar">
                         <div class="logo">
-                            <a href="index.html"><img src="img/icono-main.png" alt="Logo Sophielota"></a>
+                            <a href="index.html"><img src="img/icono-main.png" alt="Logo Sophielota"></a> <!-- Acordate de ponerles un height y width a las etiquetas de imagen -->
                         </div>
                         <ul class="nav-links">
                             <li><a href="about-me.html">about me</a></li>
@@ -27,12 +27,12 @@
                     <div class="contenido-seccion">
 
                         <div class="sophs-left">
-                            <h1 class="mi-nombre">Sop<br>hiel<br>ota</h1>
+                            <h1 class="mi-nombre">Sop<br>hiel<br>ota</h1> <!-- No uses br! Podés solucionarlo con distintas p, o con un max-width en css. -->
                             <p class="profesion">Diseñadora Jr.</p>
                         </div>
 
                         <div class="sophs-right">
-                            <div class="caja-bienvenida">
+                            <div class="caja-bienvenida"> <!-- No es necesario un div para contener una sola etiqueta. Podes aplicar estas clases directamente sobre la etiqueta en sí. Osea el caja bienvenida al h2, el caja-sophielota a la img, etc; y borrar los divs. -->
                                 <h2>Welcome to my world</h2>
                             </div>
                             <div class="caja-sophielota">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
 
-                    <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-1">
+                    <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-1"> <!-- Contene estas estrellas en un div o algo, puede ser todas juntas aunque esten esparcidas en distintas partes, para que no estén sueltas en el main (en términos de código). -->
                     <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-2">
                     <img src="img/star-violet.png" alt="estrella decorativa" class="decorative-star-3">
                     <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-4">
@@ -61,7 +61,7 @@
                     <img src="img/barra-decor.png" alt="barra decorativa">
                     </div>
 
-                        <aside class="proyectos-destacados">
+                        <aside class="proyectos-destacados"> <!-- Estas dos infos me parecen importantes para estar en unos aside. -->
                             <h2 class="primer-section">Proyectos destacados</h2>
                             <div class="carrusel-proyectos"></div>
                         </aside>
