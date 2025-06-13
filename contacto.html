@@ -10,7 +10,7 @@
     </head>
     
         <body class="contacto-page">
-            <header class="main-header">
+            <header>
                     <nav class="navbar">
                         <div class="logo">
                             <a href="index.html"><img src="img/icono-main.png" alt="Logo Sophielota"></a>
@@ -34,7 +34,7 @@
                                 <input type="text" name="Nombre" id="Nombre" maxlength="30" placeholder="Nombre completo" required>
                                 
                                 <label>* Email:</label>
-                                <input type="email" name="Email" id="Email" required>
+                                <input type="email" name="Email" id="Email" placeholder="Email" required>
 
                                 <p>* Trabajo</p>
                                 <label> Empresa <input type="radio" name="Trabajo" id="Empresa" value="Empresa"></label>
@@ -42,10 +42,10 @@
                                 
                                 <div id="camposEmpresa" class="oculto">
                                 <label for="razon_social">Razón Social:</label>
-                                <input type="text" id="razon_social" name="razon_social">
+                                <input type="text" id="razon_social" name="razon_social" placeholder="Razón Social">
                 
                                 <label for="cuit">CUIT:</label>
-                                <input type="text" id="cuit" name="cuit">
+                                <input type="text" id="cuit" name="cuit" placeholder="CUIT">
                                 </div>
 
                                 <p>Proyecto</p>
@@ -63,9 +63,12 @@
                                 <label>Redes <input type="checkbox" name="Proyecto" value="Redes" id="Redes"></label>
 
                                 <label>Paquetería <input type="checkbox" name="Proyecto" value="Paquetería" id="Paquetería"></label>
+                              
+                                <div class="botones-formulario">
+                                    <input type="reset" value="Limpiar">
+                                    <input type="submit" value="Enviar">
+                                </div>
 
-                                <input type="reset">
-                                <input type="submit">
                             </div>
                         </form>
 
@@ -94,7 +97,7 @@
                     </div>
                 </section>
             </main>
-                                
+                   <div>          
                     <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-1">
                     <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-2">
                     <img src="img/star-violet.png" alt="estrella decorativa" class="decorative-star-3">
@@ -104,16 +107,18 @@
                     <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-7">
                     <img src="img/star-violet.png" alt="estrella decorativa" class="decorative-star-8">
                     <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-9">
-                    <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-10">   
+                    <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-10">   
+                    </div>   
             <footer>
                 <div class="foot-left">
-                <p>Esta página se creó como trabajo de curriculum/portfolio para la materia de Computación 3. <br>Todos los derechos reservados Sofía Cardoso Prestes©</p>
+                <p>Esta página se creó como trabajo de curriculum/portfolio para la materia de Computación 3.</p>
+                <p>Todos los derechos reservados Sofía Cardoso Prestes©</p>
                 </div>
                 <div class="foot-right">
                     <ul>
-                        <li><img src="img/icono-behance.png" alt="logo Behance"></li>
-                        <li><img src="img/icono-insta.png" alt="logo Instagram"></li>
-                        <li><img src="img/icono-face.png" alt="logo Facebook"></li>
+                        <li><a href="https://www.behance.net/sofacardoso2"><img src="img/icono-behance.png" alt="logo Behance"></a></li>
+                        <li><a href="https://www.instagram.com/violetandkey/"><img src="img/icono-insta.png" alt="logo Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/sophiemanips"><img src="img/icono-face.png" alt="logo Facebook"></a></li>
                     </ul>
                 </div>
             </footer>  
