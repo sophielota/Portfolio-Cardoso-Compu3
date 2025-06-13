@@ -6,11 +6,21 @@
         <title>Sofia Cardoso Prestes Portfolio</title>
         <link rel="icon" href="img/soph-icon.png" type= "image/x-icon">
         <link rel="stylesheet" href="estilos.css">
-
+        <script>
+			function cambiarDisplay(visibilidadNueva){
+				document.getElementById("galeria").style.display = visibilidadNueva
+			}
+			function mostrarGaleria(){
+				cambiarDisplay('flex')
+			}
+			function ocultarGaleria(){
+				cambiarDisplay('none')
+			}
+	    </script>
     </head>
     
         <body class="proyectos-page">
-            <header class="main-header">
+            <header>
                     <nav class="navbar">
                         <div class="logo">
                             <a href="index.html"><img src="img/icono-main.png" alt="Logo Sophielota"></a>
@@ -22,23 +32,96 @@
                         </ul>
                     </nav>
                 </header>
+            <main class="seccion-proyectoss">
+                <div class="mis-proyectos">
+                    <h1> Algunos trabajos realizados</h1>
 
-                <section class="nosetodavia">
-                    <div class="grid-trabajos">
-
-
-                    </div>
-
+                <section id="miniaturas">
+                <a href="#foto-1"><img src="img/miniatura1.png" width="200px" height="200px" alt="Disney" onClick="mostrarGaleria()"></a>
+                <a href="#foto-2"><img src="img/miniatura2.png" width="200px" height="200px" alt="Women in Design" onClick="mostrarGaleria()"></a>
+                <a href="#foto-3"><img src="img/miniatura3.png" width="200px" height="200px" alt="Undercut" onClick="mostrarGaleria()"></a>
+                <a href="#foto-4"><img src="img/miniatura4.png" width="200px" height="200px" alt="Arte" onClick="mostrarGaleria()"></a>
+                <a href="#foto-5"><img src="img/miniatura5.png" width="200px" height="200px" alt="Letra experimental" onClick="mostrarGaleria()"></a>
+                <a href="#foto-6"><img src="img/miniatura6.png" width="200px" height="200px" alt="Funky" onClick="mostrarGaleria()"></a>
+                <a href="#foto-7"><img src="img/miniatura7.png" width="200px" height="200px" alt="Ballet" onClick="mostrarGaleria()"></a>
+                <a href="#foto-8"><img src="img/miniatura8.png" width="200px" height="200px" alt="Motogirl" onClick="mostrarGaleria()"></a> 
+                <a href="#foto-9"><img src="img/miniatura9.png" width="200px" height="200px" alt="Expo WId" onClick="mostrarGaleria()"></a>
                 </section>
+
+<section id="galeria">
+		<ul id="galeria-oculta">
+				<li class="fraccion-galeria" id="foto-1">
+						<a href="#foto-9"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-2"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-2">
+						<a href="#foto-1"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-3"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-3">
+						<a href="#foto-2"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-4"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-4">
+						<a href="#foto-3"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-5"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-5">
+						<a href="#foto-4"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-6"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-6">
+						<a href="#foto-5"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-7"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-7">
+						<a href="#foto-6"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-8"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-8">
+						<a href="#foto-7"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-9"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+                <li class="fraccion-galeria" id="foto-9">
+						<a href="#foto-8"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+						<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGaleria()">
+						<a href="#foto-1"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+		</ul>
+        <div class="fondo-galeria"></div>
+    </section>
+    </div>
+    <div>
+                    <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-1">
+                    <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-2">
+                    <img src="img/star-violet.png" alt="estrella decorativa" class="decorative-star-3">
+                    <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-4">
+                    <img src="img/star-violet.png" alt="estrella decorativa" class="decorative-star-5">
+                    <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-6">
+                    <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-7">
+                    <img src="img/star-violet.png" alt="estrella decorativa" class="decorative-star-8">
+                    <img src="img/star-orange.png" alt="estrella decorativa" class="decorative-star-9">
+                    <img src="img/star-pink.png" alt="estrella decorativa" class="decorative-star-10">   
+    </div>
+</main>
                       <footer>
                 <div class="foot-left">
-                <p>Esta página se creó como trabajo de curriculum/portfolio para la materia de Computación 3. <br>Todos los derechos reservados Sofía Cardoso Prestes©</p>
+                <p>Esta página se creó como trabajo de curriculum/portfolio para la materia de Computación 3.</p>
+                <p>Todos los derechos reservados Sofía Cardoso Prestes©</p>
                 </div>
                 <div class="foot-right">
                     <ul>
-                        <li><img src="img/icono-behance.png" alt="logo Behance"></li>
-                        <li><img src="img/icono-insta.png" alt="logo Instagram"></li>
-                        <li><img src="img/icono-face.png" alt="logo Facebook"></li>
+                        <li><a href="https://www.behance.net/sofacardoso2"><img src="img/icono-behance.png" alt="logo Behance"></a></li>
+                        <li><a href="https://www.instagram.com/violetandkey/"><img src="img/icono-insta.png" alt="logo Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/sophiemanips"><img src="img/icono-face.png" alt="logo Facebook"></a></li>
                     </ul>
                 </div>
               </footer>  
