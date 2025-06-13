@@ -4,6 +4,7 @@
     font-family: "Climate Crisis" ;
     src: url(fonts/ClimateCrisis-Regular-VariableFont_YEAR.ttf) format(truetype);
 }
+
 @font-face {
  font-family: "Josefin Sans";
     src: url(fonts/JosefinSans-Bold.ttf) format(truetype);
@@ -28,7 +29,7 @@
     }
 
 
-.main-header {
+.header {
     width: 100%;
     padding: 0;
 }
@@ -50,7 +51,6 @@
     padding: 15px 50px 15px 120px;
     box-sizing: border-box;
     border-radius: 10px;
-    position: relative;
     z-index: 500;
 }
 
@@ -93,6 +93,37 @@
 .home-page .logo a img {
     border-bottom: 2px solid #8A2BE2;
     padding: 2px;
+}
+
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px 20px;
+        width: 90%; 
+        max-width: 550px; 
+        background-size: cover;
+        background-position: center; 
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin: 20px 0 0 0; 
+        gap: 15px; 
+        width: 100%; 
+    }
+
+    .nav-links li a {
+        padding: 8px 10px; 
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+    .logo img {
+        height: 35px;
+    }
 }
 
 
@@ -143,26 +174,37 @@ body {
 }
 
 .sophs-left {
+    display: flex;
     flex: 1; 
     min-width: 250px; 
-    text-align: center; 
     z-index: 1; 
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    margin-top: 100px;
 }
 
-.mi-nombre {
+.nombre {
     font-family: 'Climate Crisis', sans-serif;
-    font-size: clamp(100px, 7vw, 180px);
-    line-height: 0.9;
+    font-size: 90px;
+    line-height: 1;
     color: #8A2BE2;
     align-self: flex-start;
-    margin-bottom: 20px;
-    background-color: #F0F8FF;
-    border-radius: 40px;
-    padding: 30px;
-    padding-left: 50px;
-    padding-bottom: 60px;
+    margin: 0px;
     text-align: left;
 }
+
+.caja-fondonombre {
+    background-color: #F0F8FF;
+    width: fit-content;
+    border-radius: 40px;
+    padding-top: 30px;
+    padding-left: 47px;
+    padding-right: 85px;
+    padding-bottom: 40px;
+    margin-left: 20px;
+}
+
 
 .profesion {
     font-family: 'Josefin Sans', sans-serif;
@@ -172,10 +214,12 @@ body {
     background-color: #FF1493;
     border-radius: 50px;
     width: fit-content;
-    align-self: flex-start;
+    align-self: flex-end;
     padding: 5px 30px;
-    padding-left: 50px;
-    margin-top: 0;
+    padding-left: 30px;
+    position: absolute;
+    left: 19%;
+    top: 78%;
 }
 
 .sophs-right {
@@ -187,7 +231,7 @@ body {
     z-index: 1; 
 }
 
-.caja-bienvenida {
+.sophs-right h2 {
     background-color: #FF6347;
     color: #F0F8FF;
     padding-top: 60px;
@@ -200,27 +244,25 @@ body {
     margin-left: 200px;
     text-align: center;
     font-family: 'Climate Crisis', sans-serif;
-    font-size: medium;
 }
 
-.main-habilidades {
-    padding: 20px;
+.sophs-right p {
     border-radius: 8px;
     text-align: left;
     color: #F0F8FF;
-    margin-left: 290px;
+    margin-left: 280px;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
-.caja-sophielota {
+.foto-perfil {
     position: absolute; 
-    top: 50%; 
-    left: 50%; 
+    top: 20%; 
+    left: 30%; 
     transform: translate(-50%, -50%); 
-
-}
-
-.caja-sophielota img.foto-perfil {
-    max-width: 300px; 
+    z-index: 700;
+    transform: rotate(5deg);
+    max-width: 350px; 
     height: auto;
    
 }
@@ -246,8 +288,6 @@ body {
     }
 }
 
-
-
 .seccion-sofi img[class^="decorative-star-"] {
     position: absolute;
     height: auto;
@@ -267,6 +307,13 @@ body {
 .decorative-star-9 { bottom: 1vh; right: 30vw; }
 .decorative-star-10 { bottom: 3vh; right: 8vw; }
 
+[class^="star-"] {
+    position: fixed; 
+    height: auto;
+    z-index: -1; 
+    animation: twinkle 2s infinite ease-in-out;
+}
+
 @keyframes twinkle {
     0%, 100% {
         opacity: 0.2;
@@ -276,49 +323,43 @@ body {
     }
 }
 
-
 .decorative-star-1 {
     width: clamp(50px, 5vw, 80px);
-    top: 15%;
-    left: 8%;
-    transform: rotate(20deg);
+    bottom: 10%;
+    left: 12%;
     animation-delay: 0.5s;
 }
+
 .decorative-star-2 {
     width: clamp(30px, 3vw, 50px);
     top: 40%;
     left: 2%;
-    transform: rotate(-10deg);
     animation-delay: 1.2s;
 }
+
 .decorative-star-3 {
     width: clamp(70px, 6vw, 90px);
-    bottom: 10%;
-    left: 12%;
-    transform: rotate(45deg);
+    top: 15%;
+    left: 8%;
     animation-delay: 0.8s;
 }
-
 
 .decorative-star-4 {
     width: clamp(40px, 4vw, 60px);
     top: 20%;
     right: 10%;
-    transform: rotate(-30deg);
     animation-delay: 1.8s;
 }
 .decorative-star-5 {
     width: clamp(60px, 5.5vw, 85px);
     top: 50%;
     right: 5%;
-    transform: rotate(10deg);
     animation-delay: 0.3s;
 }
 .decorative-star-6 {
     width: clamp(25px, 2.5vw, 40px);
     bottom: 5%;
     right: 15%;
-    transform: rotate(60deg);
     animation-delay: 1.5s;
 }
 
@@ -326,7 +367,6 @@ body {
     width: clamp(35px, 3.5vw, 55px);
     bottom: 2vh; 
     left: 20%;
-    transform: rotate(70deg);
     animation-delay: 0.7s;
 }
 
@@ -334,7 +374,6 @@ body {
     width: clamp(50px, 4.5vw, 70px);
     bottom: 5vh; 
     left: 45%;
-    transform: rotate(-25deg);
     animation-delay: 1.1s;
 }
 
@@ -342,7 +381,6 @@ body {
     width: clamp(40px, 4vw, 65px);
     bottom: 1vh; 
     right: 30%;
-    transform: rotate(50deg);
     animation-delay: 0.9s;
 }
 
@@ -350,32 +388,117 @@ body {
     width: clamp(28px, 2.8vw, 48px);
     bottom: 3vh; 
     right: 8%;
-    transform: rotate(-80deg);
     animation-delay: 1.6s;
+}
+
+.star-1 {
+    width: clamp(50px, 5vw, 80px);
+    bottom: 45%;
+    left: 10%;
+    animation-delay: 0.5s;
+    position: absolute;
+    z-index: 200;
+}
+
+.star-2 {
+    width: clamp(30px, 3vw, 50px);
+    top: 40%;
+    left: 60%;
+    animation-delay: 1.2s;
+    position: absolute;
+    z-index: 200;
+}
+
+.star-3 {
+    width: clamp(70px, 6vw, 90px);
+    top: 15%;
+    left: 45%;
+    animation-delay: 0.8s;
+    position: absolute;
+    z-index: 200;
+}
+
+.star-4 {
+    width: clamp(40px, 4vw, 60px);
+    bottom: 25%; 
+    left: 90%;
+    animation-delay: 1.8s;
+    position: absolute;
+    z-index: 200;
+}
+.star-5 {
+    width: clamp(60px, 5.5vw, 85px);
+    top: 50%;
+    right: 5%;
+    animation-delay: 0.3s;
+    position: absolute;
+    z-index: 200;
+}
+.star-6 {
+    width: clamp(25px, 2.5vw, 40px);
+    bottom: 10%;
+    right: 6%;
+    animation-delay: 1.5s;
+    position: absolute;
+    z-index: 200;
+}
+
+.star-7 {
+    width: clamp(35px, 3.5vw, 55px);
+    top: 5%; 
+    right: 5%;
+    animation-delay: 0.7s;
+    position: absolute;
+    z-index: 200;
+}
+
+.star-8 {
+    width: clamp(50px, 4.5vw, 70px);
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 1.1s;
+    position: absolute;
+    z-index: 200;
+}
+
+.star-9 {
+    width: clamp(40px, 4vw, 65px);
+    bottom: 20%; 
+    left: 50%;
+    animation-delay: 0.9s;
+    position: absolute;
+    z-index: 200;
+}
+
+.star-10 {
+    width: clamp(28px, 2.8vw, 48px);
+    top:25%; 
+    right: 2%;
+    animation-delay: 1.6s;
+    position: absolute;
+    z-index: 200;
 }
 
 .neon-line {
     position: absolute;
     background: linear-gradient(to right, #F0F8FF, #FF1493, #F0F8FF);
-    height: 10px;
+    height: 20px;
     width: 30%;
-    border-radius: 5px;
+    border-radius: 30px;
     filter: drop-shadow(0 0 5px #FF1493);
     z-index: 0;
 }
 
 
 .neon-line-1 {
-    top: 30%;
-    left: -10%;
-    transform: rotate(-5deg);
+    top: 22%;
+    left: 40%;
 }
 
 
 .neon-line-2 {
-    bottom: 20%;
-    right: -10%;
-    transform: rotate(10deg);
+    bottom: 18%;
+    right: 30%;
 }
 
 
@@ -396,14 +519,10 @@ body {
     transform: rotate(-45deg);
 }
 
-
-
-
 .decorative-strip {
     width: 100%;
     overflow: hidden;
-    position: relative;
-    margin-top: -100px;
+    margin-top: 40px;
 }
 
 
@@ -414,17 +533,18 @@ body {
     
 }
 
-
-.aside {
-    display: flex;
-    flex-direction: column;
-}
-
-
 .proyectos-destacados h2{
     font-family: 'Climate Crisis';
     color: #483D8B;
     background-color: #FF6347;
+    width: 400px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    margin-left: 70px;
 }
 
 
@@ -432,8 +552,15 @@ body {
     font-family: 'Climate Crisis';
     color: #483D8B;
     background-color: #FF6347;
-}
-
+    width: 200px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    margin-left: 70px;
+    }
 
 .contacto h1 {
     font-family: 'Climate Crisis';
@@ -445,7 +572,6 @@ body {
     margin-top: 70px;
     padding: 15px;
 }
-
 
 .contacto p {
     color: #F0F8FF;
@@ -466,21 +592,93 @@ form{
     margin-bottom: 45px;
     margin-left: 100px;
 }
+
 form label{
     color: #F0F8FF;
 }
 
+input[type="text"],
+input[type="email"], 
+textarea {
+  background-color: #F0F8FF;
+  color: #483D8B;
+  padding: 12px 20px; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold; 
+  transition: background-color 0.3s ease; 
+  margin-right: 10px; 
+}
+
+.botones-formulario {
+  display: flex; 
+  justify-content: flex-end; 
+  gap: 20px; 
+  margin-top: 20px; 
+  flex-wrap: wrap; 
+  margin-top: 45px;
+}
+
+input[type="submit"],
+input[type="reset"],
+button[type="submit"],
+button[type="reset"] {
+  padding: 14px 35px; 
+  border: none; 
+  border-radius: 50px; 
+  cursor: pointer; 
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 17px; 
+  font-weight: 700; 
+  transition: all 0.3s ease; 
+  letter-spacing: 0.8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+    accent-color: #8A2BE2;
+}
+
+input[type="reset"],
+button[type="reset"] {
+  background-color: #fce4ec; 
+  color: #d81b60; 
+}
+
+input[type="submit"],
+button[type="submit"] {
+  background-color: #9747FF;
+  color: #F0F8FF
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 16px #d81b60 (0, 0, 0, 0.25); 
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active,
+button[type="active"]:active,
+button[type="reset"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px #d81b60 (0, 0, 0, 0.1); 
+}
 
 .formulito p {
     color: #F0F8FF;
     margin-left: 0px;
 }
 
-
 .oculto {
     display: none;
 }
-
 
 #camposEmpresa label,
 #camposEmpresa input {
@@ -489,6 +687,15 @@ form label{
     margin-top: 10px;
 }
 
+.reset {
+background-color: #FF1493;
+color: #F0F8FF;
+}
+
+.submit{
+background-color: #8A2BE2;
+
+}
 
 .contact-info-section {
     background-color: #F0F8FF;
@@ -499,14 +706,13 @@ form label{
     min-height: 400px;
 }
 
-
 .info-container {
     background-color: #F0F8FF;
     border-radius: 30px;
     padding: 40px;
     display: flex;
     gap: 50px;
-    max-width: 900px;
+    max-width: 760px;
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
@@ -514,7 +720,6 @@ form label{
     margin-left: 100px;
     margin-bottom: 60px;
 }
-
 
 .contacto-qr {
     flex: 1;
@@ -526,12 +731,14 @@ form label{
     padding: 20px;
 }
 
-
-
+.contacto-qr img {
+    width: 319px;
+}
 
 .contacto-redes {
     flex: 1;
-    min-width: 300px;
+    width: 300px;
+    height: 300px;
     padding: 20px;
     text-align: left;
 }
@@ -539,12 +746,13 @@ form label{
 
 .contacto-redes h2 {
     font-family: 'Climate Crisis', sans-serif;
-    font-size: 2.8em;
+    font-size: 2rem;
     color: #483D8B;
-    margin-bottom: 30px;
+    width: 315px;
+    margin-top: 0px;
+    margin-bottom: 90px;
     text-align: left;
 }
-
 
 .contact-item {
     display: flex;
@@ -555,14 +763,451 @@ form label{
     color: #483D8B;
 }
 
-
 .contact-icon {
     height: 25px;
     width: auto;
-
-
 }
 
+.main-container-me{
+    width: 90%;
+    max-width: 1400px; 
+    margin: 40px auto 60px auto; 
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.contenedor-columnas-mi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    position: relative;
+    margin-top: 200px; 
+}
+
+.columna-izquierda {
+    flex: 2; 
+    margin-top: 100px;
+    min-width: 450px; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    position: relative;
+    z-index: 5; 
+}
+
+.columna-derecha {
+    flex: 1; 
+    width: 500px; 
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    position: relative;
+    margin-top: 150px; 
+}
+
+.columna-izquierda section,
+.columna-derecha section,
+.columna-derecha aside {
+    padding: 70px;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.caja-hello,
+.caja-educacion,
+.caja-experiencia {
+    background-color: #F0F8FF;
+    border-radius: 40px;
+    color: #483D8B;
+}
+
+.caja-hello p {
+    margin-bottom: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+.caja-educacion ul, .caja-experiencia ul { 
+    list-style: none;
+}
+
+.caja-educacion li, .caja-experiencia li{
+    padding-bottom: 20px;
+}
+
+.sofi-about {
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.sofi-about .sofis-image {
+    width: 350px; 
+    height: auto;
+    display: block;
+    object-fit: cover; 
+    position: absolute; 
+    left: 10%; 
+    top: 50%; 
+    z-index: 11; 
+}
+
+.sofi-about .about-me-title {
+    font-family: 'Climate Crisis',sans-serif;
+    font-size: 32px; 
+    color: #483D8B;
+    width: 300px;
+    background-color: #FF6347;
+    padding: 30px 60px;
+    border-radius: 70px;
+    position: absolute; 
+    right: 5%; 
+    top: 50%; 
+    z-index: 2; 
+}
+
+.caja-software {
+    background-color: #FF1493;
+    color: #F0F8FF;
+    padding: 80px;
+    border-radius: 30px;
+    position: relative; 
+    z-index: 10; 
+    margin-left: -17%; 
+    margin-top: -100px;
+}
+
+.software-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+}
+
+.icon-item img {
+    width: 70px; 
+    height: 70px;
+    object-fit: contain;
+    display: block; 
+}
+
+
+.icon-item:hover {
+    transform: translateY(-5px); 
+}
+
+.caja-hobbies {
+    background-color: #E3C5FF;
+    color: #483D8B;
+    border-radius: 30px;
+    width: 500px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hobbies-items {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 30px;
+    width: 100%;
+}
+
+.hobby-item {
+    text-align: center;
+    min-width: 90px;
+}
+
+.hobby-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.hobby-item p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.caja-mascotas {
+    background-color: #FFC7BD;
+    color: #FF6347;
+    border-radius: 30px;
+}
+.mis-mascotas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.mascota p {
+    text-align: center;
+    margin: 0px;
+}
+
+.mascota img {
+    width: 120px; 
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.caja-hit{
+    text-align: center;
+    background-color: #FFADD9;
+    color: #FF1493;
+    border-radius: 30px;
+}
+
+.caja-hit p{
+    line-height: 0.9px;
+}
+
+#songTitle {
+    font-weight: 700;
+}
+
+.caja-hit img{
+    width: 200px;
+}
+
+#audioElement {
+    accent-color: #FF1493; 
+    width: 300px;
+    height: 50px; 
+}
+
+.carousel-proyectos {
+    position: relative; 
+    width: 100%; 
+    max-width: 1200px; 
+    max-height: 400px;
+    margin: 50px auto; 
+    overflow: hidden; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+}
+
+.carousel-slides {
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-slides img {
+    width: 100%; 
+    flex-shrink: 0; 
+    display: block; 
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8A2BE2;; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%; 
+    z-index: 10; 
+    user-select: none; 
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgb(255, 132, 0);
+}
+
+.carousel-identidades {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 50px auto;
+    overflow: hidden; 
+    border-radius: 8px;
+    height: 150px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.carousel-slides-marquee {
+    display: flex; 
+    animation: scroll-left 8s linear infinite; 
+    white-space: nowrap;
+}
+
+.carousel-slides-marquee img {
+    height: 100px; 
+    width: auto; 
+    margin: 0 15px; 
+    flex-shrink: 0; 
+    display: block;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.carousel-slides-marquee img:hover {
+    transform: scale(1.1); 
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%); 
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+.mis-proyectos{
+    margin-left: 50px; 
+}
+
+.mis-proyectos h1{
+    font-family: 'Climate Crisis';
+    color: #483D8B;
+    background-color: #FF6347;
+    width: fit-content;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    margin-left: 70px;
+}
+
+#miniaturas {
+    display: grid; 
+      grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+#miniaturas img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+    object-fit: cover; 
+    aspect-ratio: 1 / 1; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out; 
+}
+
+#miniaturas img:hover {
+    transform: scale(1.05); 
+}
+
+
+#galeria {
+    display: none;
+	width: 100%;
+	justify-content: center;
+	height: 100vh;
+	background-color: #000000;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+
+#galeria-oculta {
+	display: flex;
+	width: 100%;
+	max-width: 1450px;
+	overflow: hidden;
+	z-index: 20;
+}
+
+.fraccion-galeria {
+	display: flex;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 100%;
+	min-width: 1450px;
+	height: 100vh;
+	justify-content: space-between;
+}
+
+
+.close {
+	position: absolute;
+	top: 10px;
+	right: 2%;
+}
+
+
+#foto-1 {
+	background-image: url("img/galeria1.jpg");
+}
+
+#foto-2 {
+	background-image: url("img/galeria2.jpg");
+}
+
+#foto-3 {
+	background-image:url("img/galeria3.jpg");
+}
+
+#foto-4 {
+	background-image:url("img/galeria4.JPG");
+}
+
+#foto-5 {
+	background-image:url("img/galeria5.jpg");
+}
+
+#foto-6 {
+	background-image:url("img/galeria6.jpg");
+}
+
+#foto-7 {
+	background-image:url("img/galeria7.jpg");
+}
+
+#foto-8 {
+	background-image:url("img/galeria8.png");
+}
+
+#foto-8 {
+	background-image:url("img/galeria9.jpg");
+}
+
+#fondo-galeria {
+	background-color: #483D8B;
+	opacity: 0.9;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+}
 
 footer {
     background-color:#9747FF;
@@ -577,13 +1222,13 @@ footer {
     padding-top: 5px;
 }
 
-
 .foot-left {
     padding-left: 20px; 
     padding-top: 10px;
     padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-
 
 .foot-right ul {
     list-style: none;
